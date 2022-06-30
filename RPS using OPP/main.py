@@ -2,8 +2,7 @@
 # Win/Loss count
 from rps import rps
 
-playerchoice = "rock"
-
-game = rps()
-game.AIPick()
-game.winloss(playerchoice)
+if __name__ == "__main__":
+    while True:
+        game = rps()
+        game.main()
