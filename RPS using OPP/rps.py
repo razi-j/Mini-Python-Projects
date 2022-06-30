@@ -1,5 +1,5 @@
 import random
-from secrets import choice
+import os
 
 class rps:
     def __init__(self):
@@ -84,6 +84,7 @@ class rps:
     def restart(self):
         restart = input("Continue Playing? 1. Yes\t 2. No\n")
         if restart == "1":
+            os.system("cls")
             self.playerChoice()
         elif restart == "2":
             quit()
