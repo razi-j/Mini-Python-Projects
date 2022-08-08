@@ -1,4 +1,5 @@
 from pytube import YouTube
+import time
 
 def download(url):
     yt = YouTube(url)
@@ -11,7 +12,7 @@ def download(url):
         for i in streams:
             print(i)
     elif ch.lower() == "v":
-        filtered = yt.streams.filter(file_extension="mp4", only_video=True)
+        filtered = yt.streams.filter(file_extension="mp4")
         streams = list(enumerate(filtered))
         for i in streams:
             print(i)
@@ -29,3 +30,10 @@ if __name__ == "__main__":
     while True:
         link = str(input("YT Video Link: "))
         download(link)
+        restart = input("Download another video (y/n)?: ")
+        if restart.lower() == "y":
+            continue
+        elif restart.lower() == "n":
+            print("Goodbye!")
+            time.sleep(3)
+            quit()
