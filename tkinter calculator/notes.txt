@@ -1,0 +1,8 @@
+Button Functions
+- must input characters needed to solve
+- solve Button
+- clear Button
+- delete(per character) Button
+
+Evaluation Functions
+- solve characters in line
